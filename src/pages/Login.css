@@ -1,0 +1,163 @@
+ion-router-outlet{
+    background-color: white;
+}
+ion-tab-bar{
+    display: none;
+}
+
+ion-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-first-text {
+    margin: 10vw auto 0;
+    width: fit-content;
+    color: #000;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.login-grey-rectangle{
+    width: 200px;
+    height: 200px;
+    background-color: #EFEFEF;
+    border-radius: 25px;
+    margin: 10vw auto 20px;
+}
+
+.login-logo {
+    display: block;
+    width: 100px;
+    margin: 43px 50px;
+    position: absolute;
+}
+
+.login-second-text {
+    margin: 7vw auto 7vw;
+    width: 65vw;
+    color: #000;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+
+.login-icon{
+    position: absolute;
+    right: 15px;
+    top: 20px;
+}
+
+.login-input-password .input-label-placement-stacked.sc-ion-input-ios-h .input-wrapper.sc-ion-input-ios, .input-label-placement-floating.sc-ion-input-ios-h .input-wrapper.sc-ion-input-ios{
+    width: 90%;
+}
+
+.input-fill-solid.sc-ion-input-md-h .input-wrapper.sc-ion-input-md{
+    border-color: #d9d9d9;
+    width: 85%;
+}
+
+.login-icon-email{
+    width: 20px;
+}
+.login-input{
+    width: 70vw;
+    margin: 10px auto 10px;
+    background: #D9D9D9;
+    border-radius: 20px;
+    color: black;
+}
+
+.input-wrapper .sc-ion-input-ios{
+    padding: 0 10px;
+}
+
+.login-input-email{
+    margin-top: 20vw;
+}
+
+.input-highlight{
+    display: none !important;
+}
+
+.login-third-text-div{
+    width: fit-content;
+    margin: 13vw auto 5vw;
+}
+
+.login-third-text-a {
+    display: inline-block;
+    margin: 0 auto;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.login-third-text-b {
+    display: inline-block;
+    margin: 0 auto;
+    color: #000;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+    padding-left: 3px;
+}
+
+.login-btn {
+    display: block;
+    width: 30vw;
+    margin: 10vw auto 10px;
+    --border-radius: 8px;
+    color: #000;
+    --background: #7AE582;
+}
+
+.input-fill-solid.sc-ion-input-md-h {
+    --background: #D9D9D9;
+    --border-color: var(--ion-color-step-500, gray);
+    --border-radius: 20px;
+    --padding-start: 16px;
+    --padding-end: 16px;
+    min-height: 56px;
+    margin-bottom: 10px;
+}
+
+.input-fill-solid.has-focus.sc-ion-input-md-h {
+    --background: #D9D9D9;
+    --border-color: var(--ion-color-step-500, gray);
+    --border-radius: 20px;
+    --padding-start: 16px;
+    --padding-end: 16px;
+    min-height: 56px;
+    margin-bottom: 10px;
+}
+
+.input-fill-solid.sc-ion-input-md-h .input-wrapper.sc-ion-input-md {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.ion-valid.sc-ion-input-md-h{
+    --highlight-color: #42cf17;
+}
+
+@media (any-hover: hover){
+    .input-fill-solid.sc-ion-input-md-h:hover {
+        --background: #e6e6e6;
+        --border-color: #404040;
+    }
+
+}
