@@ -17,7 +17,8 @@ import {
   homeSharp,
 } from "ionicons/icons";
 import Apps from "../../pages/Apps/Apps";
-import Entertainment from "../../pages/Entertainment/Books";
+import Entertainment from "../../pages/Books/Books";
+import Books from "../../pages/Books/Books";
 
 const Tabs: React.FC = () => {
   return (
@@ -34,8 +35,8 @@ const Tabs: React.FC = () => {
             <Route path="/apps">
               <Apps />
             </Route>
-            <Route path="/entertainment">
-              <Entertainment />
+            <Route path="/books">
+              <Books />
             </Route>
             <Route exact path="/">
               <Redirect to="/home" />
@@ -54,7 +55,7 @@ const Tabs: React.FC = () => {
               <IonIcon aria-hidden="true" icon={apps} />
               <IonLabel>Apps</IonLabel>
             </IonTabButton>
-            <IonTabButton tab="entertainment" href="/entertainment">
+            <IonTabButton tab="entertainment" href="/books">
               <IonIcon aria-hidden="true" icon={book} />
               <IonLabel>Livros</IonLabel>
             </IonTabButton>

@@ -1,7 +1,7 @@
 import { IonContent, IonPage } from "@ionic/react";
 import ExploreContainer from "../../components/ExploreContainer";
 
-const Entertainment: React.FC = () => {
+const Books: React.FC = () => {
   return (
     <IonPage>
       <IonContent>
@@ -11,4 +11,4 @@ const Entertainment: React.FC = () => {
   );
 };
 
-export default Entertainment;
+export default Books;

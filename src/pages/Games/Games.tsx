@@ -5,7 +5,7 @@ const Games: React.FC = () => {
   return (
     <IonPage>
       <IonContent>
-        <ExploreContainer name="Home page" />
+        <ExploreContainer name="Games page" />
       </IonContent>
     </IonPage>
   );
