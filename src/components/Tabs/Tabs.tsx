@@ -7,12 +7,17 @@ import {
   IonTabs,
 } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
-import { Route } from "react-router";
+import { Redirect, Route } from "react-router";
 import Home from "../../pages/Home/Home";
 import Games from "../../pages/Games/Games";
-import { apps, gameController, gift, home } from "ionicons/icons";
+import {
+  apps,
+  book,
+  gameController,
+  homeSharp,
+} from "ionicons/icons";
 import Apps from "../../pages/Apps/Apps";
-import Entertainment from "../../pages/Entertainment/Entertainment";
+import Entertainment from "../../pages/Entertainment/Books";
 
 const Tabs: React.FC = () => {
   return (
@@ -32,23 +37,26 @@ const Tabs: React.FC = () => {
             <Route path="/entertainment">
               <Entertainment />
             </Route>
+            <Route exact path="/">
+              <Redirect to="/home" />
+            </Route>
           </IonRouterOutlet>
           <IonTabBar slot="bottom">
             <IonTabButton tab="home" href="/home">
-              <IonIcon aria-hidden="true" icon={home} />
+              <IonIcon aria-hidden="true" icon={homeSharp} />
               <IonLabel>Home</IonLabel>
             </IonTabButton>
             <IonTabButton tab="games" href="/games">
               <IonIcon aria-hidden="true" icon={gameController} />
-              <IonLabel>Games</IonLabel>
+              <IonLabel>Jogos</IonLabel>
             </IonTabButton>
             <IonTabButton tab="apps" href="/apps">
               <IonIcon aria-hidden="true" icon={apps} />
               <IonLabel>Apps</IonLabel>
             </IonTabButton>
             <IonTabButton tab="entertainment" href="/entertainment">
-              <IonIcon aria-hidden="true" icon={gift} />
-              <IonLabel>Entertainment</IonLabel>
+              <IonIcon aria-hidden="true" icon={book} />
+              <IonLabel>Livros</IonLabel>
             </IonTabButton>
           </IonTabBar>
         </IonTabs>

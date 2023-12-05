@@ -1,4 +1,4 @@
-import { IonContent, IonHeader, IonPage, IonTitle } from "@ionic/react";
+import { IonContent, IonPage } from "@ionic/react";
 import ExploreContainer from "../../components/ExploreContainer";
 
 const Home: React.FC = () => {
