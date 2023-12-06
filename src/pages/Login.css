@@ -1,9 +1,6 @@
 ion-router-outlet{
     background-color: white;
 }
-ion-tab-bar{
-    display: none;
-}
 
 ion-content{
     display: flex;

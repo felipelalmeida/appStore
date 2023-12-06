@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { IonContent, IonPage, IonInput, IonIcon, IonButton } from '@ionic/react';
 import { eyeOutline, eyeOffOutline } from 'ionicons/icons';
 import customIcon from '/profile-icon.svg';
@@ -30,6 +30,21 @@ const Login: React.FC = () => {
   const toggleShowPassword = () => {
     setShowPassword(!showPassword);
   };
+
+  useEffect(() => {
+    const tabBar = document.querySelector('ion-tab-bar');
+    if (tabBar) {
+      tabBar.style.display = 'none';
+    }
+  
+    return () => {
+      const tabBar = document.querySelector('ion-tab-bar');
+      if (tabBar) {
+        tabBar.style.display = 'flex';
+      }
+    };
+  }, []);
+
   return (
     <IonPage>
       <IonContent className="ion-content" fullscreen>
@@ -44,12 +59,12 @@ const Login: React.FC = () => {
         </div>
         <IonInput
             className={`login-input-email login-input ${isValid && 'ion-valid'} ${isValid === false && 'ion-invalid'} ${isTouched && 'ion-touched'}`}
-            type="email" fill="solid" label="Email" labelPlacement="floating" onIonInput={(event) => validate(event)} onIonBlur={() => markTouched()}
+            type="email" placeholder="fulano@email.com" fill="solid" label="Email" labelPlacement="floating" onIonInput={(event) => validate(event)} onIonBlur={() => markTouched()}
         >
           <img className="login-icon login-icon-email" src="/profile-icon.svg" />
         </IonInput>
         <IonInput
-          className={`login-input login-input-password`} type={showPassword ? "text" : "password"} fill="solid" label="Senha" labelPlacement="floating"
+          className={`login-input login-input-password`} type={showPassword ? "text" : "password"} placeholder="Senha" fill="solid" label="Senha" labelPlacement="floating"
         >
           <IonIcon className="login-icon" icon={showPassword ? eyeOffOutline : eyeOutline} onClick={toggleShowPassword} />
         </IonInput>
