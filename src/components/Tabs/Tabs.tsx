@@ -18,6 +18,7 @@ import {
 import Apps from "../../pages/Apps/Apps";
 import Entertainment from "../../pages/Books/Books";
 import Books from "../../pages/Books/Books";
+import Login from "../../pages/Login";
 
 const Tabs: React.FC = () => {
   return (
@@ -35,7 +36,7 @@ const Tabs: React.FC = () => {
               <Books />
             </Route>
             <Route exact path="/">
-              <Redirect to="/apps" />
+              <Login />
             </Route>
           </IonRouterOutlet>
           <IonTabBar slot="bottom">
