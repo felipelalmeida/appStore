@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { IonContent, IonPage, IonInput, IonIcon, IonButton } from '@ionic/react';
+import React, { useState } from 'react';
+import { IonContent, IonPage, IonInput, IonIcon, IonButton,useIonViewWillEnter } from '@ionic/react';
 import { eyeOutline, eyeOffOutline } from 'ionicons/icons';
 import customIcon from '/profile-icon.svg';
 import './Login.css';
@@ -14,6 +14,9 @@ const Login: React.FC = () => {
       /^(?=.{1,254}$)(?=.{1,64}@)[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
     );
   };
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   const validate = (ev: Event) => {
     const value = (ev.target as HTMLInputElement).value;
@@ -31,18 +34,11 @@ const Login: React.FC = () => {
     setShowPassword(!showPassword);
   };
 
-  useEffect(() => {
+  useIonViewWillEnter(() => {
     const tabBar = document.querySelector('ion-tab-bar');
     if (tabBar) {
       tabBar.style.display = 'none';
     }
-  
-    return () => {
-      const tabBar = document.querySelector('ion-tab-bar');
-      if (tabBar) {
-        tabBar.style.display = 'flex';
-      }
-    };
   }, []);
 
   return (
@@ -58,17 +54,32 @@ const Login: React.FC = () => {
           <p className="login-second-text">Para acessar XXX entre ou crie uma conta</p>
         </div>
         <IonInput
-            className={`login-input-email login-input ${isValid && 'ion-valid'} ${isValid === false && 'ion-invalid'} ${isTouched && 'ion-touched'}`}
-            type="email" placeholder="fulano@email.com" fill="solid" label="Email" labelPlacement="floating" onIonInput={(event) => validate(event)} onIonBlur={() => markTouched()}
+          className={`login-input-email login-input ${isValid && 'ion-valid'} ${isValid === false && 'ion-invalid'} ${isTouched && 'ion-touched'}`}
+          type="email"
+          placeholder="fulano@email.com"
+          fill="solid"
+          label="Email"
+          labelPlacement="floating"
+          onIonInput={(event) => {
+            validate(event);
+            setEmail(event.target.value as string);
+          }}
+          onIonBlur={() => markTouched()}
         >
           <img className="login-icon login-icon-email" src="/profile-icon.svg" />
         </IonInput>
         <IonInput
-          className={`login-input login-input-password`} type={showPassword ? "text" : "password"} placeholder="Senha" fill="solid" label="Senha" labelPlacement="floating"
+          className={`login-input login-input-password`}
+          type={showPassword ? "text" : "password"}
+          placeholder="Senha"
+          fill="solid"
+          label="Senha"
+          labelPlacement="floating"
+          onIonInput={(event) => setPassword(event.target.value as string)}
         >
           <IonIcon className="login-icon" icon={showPassword ? eyeOffOutline : eyeOutline} onClick={toggleShowPassword} />
         </IonInput>
-        <IonButton className="login-btn">Entrar</IonButton>
+        <IonButton className="login-btn" routerLink="/apps" disabled={!email || !password}>Entrar</IonButton>
         <div className="login-third-text-div">
           <p className="login-third-text-a">Não tem login?</p>
           <p className="login-third-text-b"> Cadastre-se</p>
