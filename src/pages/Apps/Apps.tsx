@@ -1,77 +1,121 @@
-import { IonContent, IonPage, useIonViewWillEnter, IonGrid, IonRow, IonCol } from "@ionic/react";
-import ExploreContainer from "../../components/ExploreContainer";
+import {
+  IonContent,
+  IonPage,
+  useIonViewWillEnter,
+  IonGrid,
+  IonRow,
+  IonCol,
+} from "@ionic/react";
 import Header from "../../components/Header/Header";
+import "../../theme/pageStyle.css";
+const fullStar = "/public/icons/full-star.svg";
+const download = "/public/icons/download-icon.svg";
 
 const Apps: React.FC = () => {
   useIonViewWillEnter(() => {
-    const tabBar = document.querySelector('ion-tab-bar');
+    const tabBar = document.querySelector("ion-tab-bar");
     if (tabBar) {
-      tabBar.style.display = 'flex';
+      tabBar.style.display = "flex";
     }
   }, []);
   return (
     <IonPage>
       <IonContent>
-        <Header showLeftArrow={false}/>
+        <Header showLeftArrow={false} />
         <IonGrid>
           <IonRow className="row-class">
-            <IonCol className="column-class column-class-first">Para você</IonCol>
+            <IonCol className="column-class column-class-first">
+              Para você
+            </IonCol>
             <IonCol className="column-class">Em alta</IonCol>
             <IonCol className="column-class">Novidades</IonCol>
             <IonCol className="column-class">Premium</IonCol>
           </IonRow>
           {/* Banner1 */}
           <div className="main-item-banner">
-            <a href="#">
-              <img className="banner-img" src="/duo_banner.png" />
+            <a href="#" className="banner-img">
+              <img src="/imgs/apps/miro/banner.png" />
             </a>
             <div className="banner-content">
               <IonCol size="2">
                 <a href="#">
-                  <img className="icon-img" src="/duo_icon.png" />
+                  <img className="icon-img" src="/imgs/apps/miro/icon.png" />
                 </a>
               </IonCol>
               <IonCol size="8">
-                <p className="item-line-one">Duolingo</p>
+                <p className="item-line-one">Miro</p>
                 <div>
-                  <p className="item-line-two">Educação • 4,7 <img className="rating-star" src="/full-star.svg" /></p>
+                  <p className="item-line-two">
+                    Produtividade • 4,5{" "}
+                    <img className="rating-star" src={fullStar} />
+                  </p>
                 </div>
               </IonCol>
               <IonCol size="2">
                 <a href="#">
-                  <img className="download-img" src="/download-icon.svg" />
+                  <img className="download-img" src={download} />
                 </a>
               </IonCol>
             </div>
           </div>
           {/* Banner2 */}
           <div className="main-item-banner">
-            <a href="#">
-              <img className="banner-img" src="/duo_banner.png" />
+            <a href="#" className="banner-img">
+              <img src="/imgs/apps/max/banner.png" />
             </a>
             <div className="banner-content">
               <IonCol size="2">
                 <a href="#">
-                  <img className="icon-img" src="/duo_icon.png" />
+                  <img className="icon-img" src="/imgs/apps/max/icon.png" />
                 </a>
               </IonCol>
               <IonCol size="8">
-                <p className="item-line-one">Duolingo</p>
+                <p className="item-line-one">Max: TV, & Movies</p>
                 <div>
-                  <p className="item-line-two">Educação • 4,7 <img className="rating-star" src="/full-star.svg" /></p>
+                  <p className="item-line-two">
+                    Entretenimento • 4,3{" "}
+                    <img className="rating-star" src={fullStar} />
+                  </p>
                 </div>
               </IonCol>
               <IonCol size="2">
                 <a href="#">
-                  <img className="download-img" src="/download-icon.svg" />
+                  <img className="download-img" src={download} />
                 </a>
               </IonCol>
             </div>
           </div>
           {/* Banner3 */}
           <div className="main-item-banner">
-            <a href="#">
-              <img className="banner-img" src="/duo_banner.png" />
+            <a href="#" className="banner-img">
+              <img src="/imgs/apps/deezer/banner.png" />
+            </a>
+            <div className="banner-content">
+              <IonCol size="2">
+                <a href="#">
+                  <img className="icon-img" src="/imgs/apps/deezer/icon.png" />
+                </a>
+              </IonCol>
+              <IonCol size="8">
+                <p className="item-line-one">Deezer: Músicas e Podcasts</p>
+                <div>
+                  <p className="item-line-two">
+                    Entretenimento • 4,9{" "}
+                    <img className="rating-star" src={fullStar} />
+                  </p>
+                </div>
+              </IonCol>
+              <IonCol size="2">
+                <a href="#">
+                  <img className="download-img" src={download} />
+                </a>
+              </IonCol>
+            </div>
+          </div>
+          {/* Banner4 */}
+          <div className="main-item-banner">
+            <a href="#" className="banner-img">
+              <img src="/duo_banner.png" />
             </a>
             <div className="banner-content">
               <IonCol size="2">
@@ -82,12 +126,15 @@ const Apps: React.FC = () => {
               <IonCol size="8">
                 <p className="item-line-one">Duolingo</p>
                 <div>
-                  <p className="item-line-two">Educação • 4,7 <img className="rating-star" src="/full-star.svg" /></p>
+                  <p className="item-line-two">
+                    Educação • 4,7{" "}
+                    <img className="rating-star" src={fullStar} />
+                  </p>
                 </div>
               </IonCol>
               <IonCol size="2">
                 <a href="#">
-                  <img className="download-img" src="/download-icon.svg" />
+                  <img className="download-img" src={download} />
                 </a>
               </IonCol>
             </div>

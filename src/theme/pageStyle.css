@@ -16,6 +16,11 @@
 .banner-img{
     border-radius: 20px;
 }
+
+.banner-img img{
+    border-radius: 20px;
+}
+
 .main-item-banner{
     display: flex;
     justify-content: center;
