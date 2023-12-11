@@ -4,6 +4,24 @@
     justify-content: space-between;
 }
 
+.sc-ion-searchbar-md-h {
+    --background: rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.07);
+    --border-radius: 10px;
+    --box-shadow: none;
+    --cancel-button-color: var(--ion-color-primary, #3880ff);
+    --clear-button-color: var(--ion-color-step-600, #666666);
+    --color: var(--ion-text-color, #000);
+    --icon-color: var(--ion-color-step-600, #666666);
+    -webkit-padding-start: 12px;
+    padding-inline-start: 12px;
+    -webkit-padding-end: 12px;
+    padding-inline-end: 12px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    min-height: 60px;
+    contain: content;
+}
+
 .padding-arrow {
     padding-top: 9px;
 }
