@@ -31,13 +31,16 @@ const Games: React.FC = () => {
           </IonRow>
           {/* Banner1 */}
           <div className="main-item-banner">
-            <a  className="banner-img">
+            <a className="banner-img" href="/app-page">
               <img src="/imgs/games/minecraft/banner.png" />
             </a>
             <div className="banner-content">
               <IonCol size="2">
-                <a >
-                  <img className="icon-img" src="/imgs/games/minecraft/icon.png" />
+                <a href="/app-page">
+                  <img
+                    className="icon-img"
+                    src="/imgs/games/minecraft/icon.png"
+                  />
                 </a>
               </IonCol>
               <IonCol size="8">
@@ -50,20 +53,23 @@ const Games: React.FC = () => {
                 </div>
               </IonCol>
               <IonCol size="2">
-                <a >
-                  <img className="download-img" src="/icons/download-icon.svg" />
+                <a>
+                  <img
+                    className="download-img"
+                    src="/icons/download-icon.svg"
+                  />
                 </a>
               </IonCol>
             </div>
           </div>
           {/* Banner2 */}
           <div className="main-item-banner">
-            <a  className="banner-img">
+            <a className="banner-img">
               <img src="/imgs/games/dead/banner.png" />
             </a>
             <div className="banner-content">
               <IonCol size="2">
-                <a >
+                <a>
                   <img className="icon-img" src="/imgs/games/dead/icon.png" />
                 </a>
               </IonCol>
@@ -77,20 +83,23 @@ const Games: React.FC = () => {
                 </div>
               </IonCol>
               <IonCol size="2">
-                <a >
-                  <img className="download-img" src="/icons/download-icon.svg" />
+                <a>
+                  <img
+                    className="download-img"
+                    src="/icons/download-icon.svg"
+                  />
                 </a>
               </IonCol>
             </div>
           </div>
           {/* Banner3 */}
           <div className="main-item-banner">
-            <a  className="banner-img">
+            <a className="banner-img">
               <img src="/imgs/games/birds/banner.png" />
             </a>
             <div className="banner-content">
               <IonCol size="2">
-                <a >
+                <a>
                   <img className="icon-img" src="/imgs/games/birds/icon.png" />
                 </a>
               </IonCol>
@@ -104,20 +113,23 @@ const Games: React.FC = () => {
                 </div>
               </IonCol>
               <IonCol size="2">
-                <a >
-                  <img className="download-img" src="/icons/download-icon.svg" />
+                <a>
+                  <img
+                    className="download-img"
+                    src="/icons/download-icon.svg"
+                  />
                 </a>
               </IonCol>
             </div>
           </div>
           {/* Banner4 */}
           <div className="main-item-banner">
-            <a  className="banner-img">
+            <a className="banner-img">
               <img src="/imgs/games/ff/banner.png" />
             </a>
             <div className="banner-content">
               <IonCol size="2">
-                <a >
+                <a>
                   <img className="icon-img" src="/imgs/games/ff/icon.png" />
                 </a>
               </IonCol>
@@ -131,8 +143,11 @@ const Games: React.FC = () => {
                 </div>
               </IonCol>
               <IonCol size="2">
-                <a >
-                  <img className="download-img" src="/icons/download-icon.svg" />
+                <a>
+                  <img
+                    className="download-img"
+                    src="/icons/download-icon.svg"
+                  />
                 </a>
               </IonCol>
             </div>
