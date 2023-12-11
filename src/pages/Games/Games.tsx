@@ -8,6 +8,8 @@ import {
 } from "@ionic/react";
 import Header from "../../components/Header/Header";
 import "../../theme/pageStyle.css";
+import { Route } from "react-router";
+import AppPage from "../AppPage/AppPage";
 
 const Games: React.FC = () => {
   useIonViewWillEnter(() => {
@@ -36,7 +38,10 @@ const Games: React.FC = () => {
             </a>
             <div className="banner-content">
               <IonCol size="2">
-                <a href="/app-page">
+                <a>
+                  <Route path="/app-page">
+                    <AppPage />
+                  </Route>
                   <img
                     className="icon-img"
                     src="/imgs/games/minecraft/icon.png"

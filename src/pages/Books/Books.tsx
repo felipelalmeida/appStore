@@ -5,23 +5,37 @@ import {
   IonGrid,
   IonRow,
   IonCol,
-  IonList,
-  IonItem,
-  IonAvatar,
   IonLabel,
   IonButton,
 } from "@ionic/react";
 import Header from "../../components/Header/Header";
 import "../../theme/pageStyle.css";
 import "./Books.css";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const Books: React.FC = () => {
+  const [data, setData] = useState([]);
+
   useIonViewWillEnter(() => {
     const tabBar = document.querySelector("ion-tab-bar");
     if (tabBar) {
       tabBar.style.display = "flex";
     }
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(`http://localhost:3000/books`);
+        if (response.status === 200) {
+          setData(response.data);
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    fetchData();
   }, []);
+
   return (
     <IonPage>
       <IonContent>
@@ -36,90 +50,20 @@ const Books: React.FC = () => {
             <IonCol className="column-class">Premium</IonCol>
           </IonRow>
           <div className="items">
-            <IonRow>
-              <div className="item">
-                <img src="/imgs/books/witcher.png" className="book-img" />
-                <div className="book-info">
-                  <IonLabel>O Último Desejo</IonLabel>
-                  <label className="book-author">Andrzej Sapkowski</label>
+            {data.map((item: any) => (
+              <IonRow key={item.id}>
+                <div className="item">
+                  <img src={item.img} className="book-img" />
+                  <div className="book-info">
+                    <IonLabel>{item.title}</IonLabel>
+                    <label className="book-author">{item.author}</label>
+                  </div>
+                  <IonButton shape="round" className="btn-price" size="small">
+                    R$ {item.price}
+                  </IonButton>
                 </div>
-                <IonButton shape="round" className="btn-price" size="small">
-                  R$ 49,12
-                </IonButton>
-              </div>
-            </IonRow>
-            <IonRow>
-              <div className="item">
-                <img src="/imgs/books/leonardo.png" className="book-img" />
-                <div className="book-info">
-                  <IonLabel>Leonardo da Vinci</IonLabel>
-                  <label className="book-author">Walter Isaacson</label>
-                </div>
-                <IonButton shape="round" className="btn-price" size="small">
-                  R$ 85,40
-                </IonButton>
-              </div>
-            </IonRow>
-            <IonRow>
-              <div className="item">
-                <img src="/imgs/books/one-piece.png" className="book-img" />
-                <div className="book-info">
-                  <IonLabel>One Piece vol 2</IonLabel>
-                  <label className="book-author">Eiichiro Oda</label>
-                </div>
-                <IonButton shape="round" className="btn-price" size="small">
-                  R$ 34,37
-                </IonButton>
-              </div>
-            </IonRow>
-            <IonRow>
-              <div className="item">
-                <img src="/imgs/books/hunterXhunter.png" className="book-img" />
-                <div className="book-info">
-                  <IonLabel>Hunter X Hunter</IonLabel>
-                  <label className="book-author">Yoshihiro Togashi</label>
-                </div>
-                <IonButton shape="round" className="btn-price" size="small">
-                  R$ 34,37
-                </IonButton>
-              </div>
-            </IonRow>
-            <IonRow>
-              <div className="item">
-                <img src="/imgs/books/tolken.png" className="book-img" />
-                <div className="book-info">
-                  <IonLabel>A Irmandade do Anel</IonLabel>
-                  <label className="book-author">J. R. R. Tolkien</label>
-                </div>
-                <IonButton shape="round" className="btn-price" size="small">
-                  R$ 58,95
-                </IonButton>
-              </div>
-            </IonRow>
-            <IonRow>
-              <div className="item">
-                <img src="/imgs/books/hakusho.png" className="book-img" />
-                <div className="book-info">
-                  <IonLabel>Yu Yu Hakusho</IonLabel>
-                  <label className="book-author">Yoshihiro Togashi</label>
-                </div>
-                <IonButton shape="round" className="btn-price" size="small">
-                  R$ 34,37
-                </IonButton>
-              </div>
-            </IonRow>
-            <IonRow>
-              <div className="item">
-                <img src="/imgs/books/fourth.png" className="book-img" />
-                <div className="book-info">
-                  <IonLabel>Quarta Asa</IonLabel>
-                  <label className="book-author">Rebecca Yarros</label>
-                </div>
-                <IonButton shape="round" className="btn-price" size="small">
-                  R$ 73,70
-                </IonButton>
-              </div>
-            </IonRow>
+              </IonRow>
+            ))}
           </div>
         </IonGrid>
       </IonContent>

@@ -1,4 +1,4 @@
-import { IonIcon, IonSearchbar } from "@ionic/react";
+import { IonSearchbar } from "@ionic/react";
 import "./Header.css";
 
 const Header = ({ showLeftArrow }: { showLeftArrow: boolean }) => {
