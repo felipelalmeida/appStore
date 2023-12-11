@@ -1,0 +1,27 @@
+.items {
+    margin: 0 20px;
+}
+.item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 30px;
+}
+.book-img {
+    height: 100px;
+    width: 70px;
+}
+
+.book-info {
+    width: 130px
+}
+
+.book-author {
+    font-size: 12px;
+}
+
+.btn-price {
+    --background: #7AE582;
+}

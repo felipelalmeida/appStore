@@ -22,7 +22,7 @@ const Header = ({ showLeftArrow }: { showLeftArrow: boolean }) => {
       return (
         <div className="header-container">
           <div className="search-bar">
-            <IonSearchbar placeholder="Pesquisar apps ou jogos"></IonSearchbar>
+            <IonSearchbar placeholder="Pesquisar na loja"></IonSearchbar>
           </div>
           <div className="icon-account">
             <img src="/icons/person.svg" alt="person icon" />
