@@ -8,8 +8,6 @@ import {
 } from "@ionic/react";
 import Header from "../../components/Header/Header";
 import "../../theme/pageStyle.css";
-const fullStar = "/public/icons/full-star.svg";
-const download = "/public/icons/download-icon.svg";
 
 const Games: React.FC = () => {
   useIonViewWillEnter(() => {
@@ -33,39 +31,39 @@ const Games: React.FC = () => {
           </IonRow>
           {/* Banner1 */}
           <div className="main-item-banner">
-            <a href="#" className="banner-img">
+            <a  className="banner-img">
               <img src="/imgs/games/minecraft/banner.png" />
             </a>
             <div className="banner-content">
               <IonCol size="2">
-                <a href="#">
+                <a >
                   <img className="icon-img" src="/imgs/games/minecraft/icon.png" />
                 </a>
               </IonCol>
               <IonCol size="8">
-                <p className="item-line-one">Minefract</p>
+                <p className="item-line-one">Minecraft</p>
                 <div>
                   <p className="item-line-two">
                     Ação e Aventura • 5{" "}
-                    <img className="rating-star" src={fullStar} />
+                    <img className="rating-star" src={"/icons/full-star.svg"} />
                   </p>
                 </div>
               </IonCol>
               <IonCol size="2">
-                <a href="#">
-                  <img className="download-img" src={download} />
+                <a >
+                  <img className="download-img" src="/icons/download-icon.svg" />
                 </a>
               </IonCol>
             </div>
           </div>
           {/* Banner2 */}
           <div className="main-item-banner">
-            <a href="#" className="banner-img">
+            <a  className="banner-img">
               <img src="/imgs/games/dead/banner.png" />
             </a>
             <div className="banner-content">
               <IonCol size="2">
-                <a href="#">
+                <a >
                   <img className="icon-img" src="/imgs/games/dead/icon.png" />
                 </a>
               </IonCol>
@@ -74,25 +72,25 @@ const Games: React.FC = () => {
                 <div>
                   <p className="item-line-two">
                     Hack and Slash • 4,7{" "}
-                    <img className="rating-star" src={fullStar} />
+                    <img className="rating-star" src={"/icons/full-star.svg"} />
                   </p>
                 </div>
               </IonCol>
               <IonCol size="2">
-                <a href="#">
-                  <img className="download-img" src={download} />
+                <a >
+                  <img className="download-img" src="/icons/download-icon.svg" />
                 </a>
               </IonCol>
             </div>
           </div>
           {/* Banner3 */}
           <div className="main-item-banner">
-            <a href="#" className="banner-img">
+            <a  className="banner-img">
               <img src="/imgs/games/birds/banner.png" />
             </a>
             <div className="banner-content">
               <IonCol size="2">
-                <a href="#">
+                <a >
                   <img className="icon-img" src="/imgs/games/birds/icon.png" />
                 </a>
               </IonCol>
@@ -101,25 +99,25 @@ const Games: React.FC = () => {
                 <div>
                   <p className="item-line-two">
                     Casual • 4,2{" "}
-                    <img className="rating-star" src={fullStar} />
+                    <img className="rating-star" src={"/icons/full-star.svg"} />
                   </p>
                 </div>
               </IonCol>
               <IonCol size="2">
-                <a href="#">
-                  <img className="download-img" src={download} />
+                <a >
+                  <img className="download-img" src="/icons/download-icon.svg" />
                 </a>
               </IonCol>
             </div>
           </div>
           {/* Banner4 */}
           <div className="main-item-banner">
-            <a href="#" className="banner-img">
+            <a  className="banner-img">
               <img src="/imgs/games/ff/banner.png" />
             </a>
             <div className="banner-content">
               <IonCol size="2">
-                <a href="#">
+                <a >
                   <img className="icon-img" src="/imgs/games/ff/icon.png" />
                 </a>
               </IonCol>
@@ -128,13 +126,13 @@ const Games: React.FC = () => {
                 <div>
                   <p className="item-line-two">
                     Battle Royale • 3,9{" "}
-                    <img className="rating-star" src={fullStar} />
+                    <img className="rating-star" src={"/icons/full-star.svg"} />
                   </p>
                 </div>
               </IonCol>
               <IonCol size="2">
-                <a href="#">
-                  <img className="download-img" src={download} />
+                <a >
+                  <img className="download-img" src="/icons/download-icon.svg" />
                 </a>
               </IonCol>
             </div>

@@ -1,9 +1,6 @@
 import { IonIcon, IonSearchbar } from "@ionic/react";
 import "./Header.css";
 
-const person = "/public/icons/person.svg";
-const leftArrow = "/public/icons/arrow-left.svg";
-
 const Header = ({ showLeftArrow }: { showLeftArrow: boolean }) => {
   const handleClick = () => {
     window.history.back();
@@ -14,10 +11,10 @@ const Header = ({ showLeftArrow }: { showLeftArrow: boolean }) => {
       return (
         <div className="header-container padding-arrow">
           <div className="left-arrow" onClick={handleClick}>
-            <IonIcon icon={leftArrow}></IonIcon>
+            <img src="/icons/arrow-left.svg" alt="left arrow" />
           </div>
           <div className="icon-account">
-            <IonIcon icon={person}></IonIcon>
+            <img src="/icons/person.svg" alt="person icon" />
           </div>
         </div>
       );
@@ -28,7 +25,7 @@ const Header = ({ showLeftArrow }: { showLeftArrow: boolean }) => {
             <IonSearchbar placeholder="Pesquisar apps ou jogos"></IonSearchbar>
           </div>
           <div className="icon-account">
-            <IonIcon icon={person}></IonIcon>
+            <img src="/icons/person.svg" alt="person icon" />
           </div>
         </div>
       );
