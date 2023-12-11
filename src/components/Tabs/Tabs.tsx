@@ -19,6 +19,7 @@ import Apps from "../../pages/Apps/Apps";
 import Entertainment from "../../pages/Books/Books";
 import Books from "../../pages/Books/Books";
 import Login from "../../pages/Login";
+import AppPage from "../../pages/AppPage/AppPage";
 
 const Tabs: React.FC = () => {
   return (
@@ -34,6 +35,9 @@ const Tabs: React.FC = () => {
             </Route>
             <Route path="/books">
               <Books />
+            </Route>
+            <Route path="/app-page">
+              <AppPage />
             </Route>
             <Route exact path="/">
               <Login />
