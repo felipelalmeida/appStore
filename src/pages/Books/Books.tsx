@@ -27,9 +27,11 @@ const Books: React.FC = () => {
     }
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/books`);
+        // const response = await axios.get(`http://localhost:3000/books`);
+        const response = await axios.get(`https://71114d53-e4cf-4d7d-8870-02d9dcc9b5c7.mock.pstmn.io/books`);
         if (response.status === 200) {
-          setData(response.data);
+          console.log(response.data.books)
+          setData(response.data.books);
         }
       } catch (error) {
         console.log(error);
