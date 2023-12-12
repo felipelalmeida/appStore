@@ -7,18 +7,16 @@ import {
   IonTabs,
 } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
-import { Redirect, Route } from "react-router";
+import { Route } from "react-router";
 import Games from "../../pages/Games/Games";
 import {
   apps,
   book,
   gameController,
-  homeSharp,
 } from "ionicons/icons";
 import Apps from "../../pages/Apps/Apps";
-import Entertainment from "../../pages/Books/Books";
 import Books from "../../pages/Books/Books";
-import Login from "../../pages/Login";
+import Login from "../../pages/Login/Login";
 import AppPage from "../../pages/AppPage/AppPage";
 
 const Tabs: React.FC = () => {

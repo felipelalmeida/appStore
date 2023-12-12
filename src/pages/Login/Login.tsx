@@ -45,13 +45,13 @@ const Login: React.FC = () => {
     <IonPage>
       <IonContent className="ion-content" fullscreen>
         <div>
-          <p className="login-first-text">Bem vindo(a) ao XXX</p>
+          <p className="login-first-text">Bem vindo(a) ao Uni Store</p>
         </div>
         <div className="login-grey-rectangle">
           <img className="login-logo" src="/login-logo.svg" alt=""/>
         </div>
         <div>
-          <p className="login-second-text">Para acessar XXX entre ou crie uma conta</p>
+          <p className="login-second-text">Para acessar Uni Store entre ou crie uma conta</p>
         </div>
         <IonInput
           className={`login-input-email login-input ${isValid && 'ion-valid'} ${isValid === false && 'ion-invalid'} ${isTouched && 'ion-touched'}`}
