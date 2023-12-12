@@ -225,15 +225,15 @@ const AppPage: React.FC = () => {
             <div className="footer-d-content">
               <IonCol size="2">
                 <a href="#">
-                  <img className="icon-img" src="/duo_icon.png" />
+                  <img className="icon-img" src="/imgs/games/dead/icon.png" />
                 </a>
               </IonCol>
               <IonCol size="7">
-                <p className="item-line-one">Duolingo</p>
+                <p className="item-line-one">Dead Cells</p>
                 <div>
                   <p className="item-line-two">
-                    Educação • 4,7{" "}
-                    <img className="rating-star" src="/full-star.svg" />
+                    Hack and Slash • 4,7{" "}
+                    <img className="rating-star" src={"/icons/full-star.svg"} />
                   </p>
                 </div>
               </IonCol>
@@ -246,15 +246,15 @@ const AppPage: React.FC = () => {
             <div className="footer-d-content">
               <IonCol size="2">
                 <a href="#">
-                  <img className="icon-img" src="/duo_icon.png" />
+                  <img className="icon-img" src="/imgs/games/birds/icon.png" />
                 </a>
               </IonCol>
               <IonCol size="7">
-                <p className="item-line-one">Duolingo</p>
+                <p className="item-line-one">Angry Birds 2</p>
                 <div>
                   <p className="item-line-two">
-                    Educação • 4,7{" "}
-                    <img className="rating-star" src="/full-star.svg" />
+                    Casual • 4,2{" "}
+                    <img className="rating-star" src={"/icons/full-star.svg"} />
                   </p>
                 </div>
               </IonCol>

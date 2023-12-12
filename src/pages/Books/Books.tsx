@@ -7,15 +7,18 @@ import {
   IonCol,
   IonLabel,
   IonButton,
+  IonSpinner,
 } from "@ionic/react";
 import Header from "../../components/Header/Header";
 import "../../theme/pageStyle.css";
 import "./Books.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 
 const Books: React.FC = () => {
   const [data, setData] = useState([]);
+  const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useIonViewWillEnter(() => {
     const tabBar = document.querySelector("ion-tab-bar");
@@ -30,11 +33,35 @@ const Books: React.FC = () => {
         }
       } catch (error) {
         console.log(error);
+        setError(true);
+      } finally {
+        setLoading(false);
       }
     };
 
     fetchData();
   }, []);
+
+  if (loading) {
+    return (
+      <IonPage>
+        <IonContent>
+          <Header showLeftArrow={false} />
+          <IonGrid>
+            <IonRow className="row-class">
+              <IonCol className="column-class column-class-first">
+                Para você
+              </IonCol>
+              <IonCol className="column-class">Em alta</IonCol>
+              <IonCol className="column-class">Novidades</IonCol>
+              <IonCol className="column-class">Premium</IonCol>
+            </IonRow>
+            <IonSpinner className="middle-page" name="crescent" />
+          </IonGrid>
+        </IonContent>
+      </IonPage>
+    );
+  }
 
   return (
     <IonPage>
@@ -49,22 +76,28 @@ const Books: React.FC = () => {
             <IonCol className="column-class">Novidades</IonCol>
             <IonCol className="column-class">Premium</IonCol>
           </IonRow>
-          <div className="items">
-            {data.map((item: any) => (
-              <IonRow key={item.id}>
-                <div className="item">
-                  <img src={item.img} className="book-img" />
-                  <div className="book-info">
-                    <IonLabel>{item.title}</IonLabel>
-                    <label className="book-author">{item.author}</label>
+          {error ? (
+            <div className="middle-page">
+              Ocorreu um erro. Verifique sua conexão e tente novamente.
+            </div>
+          ) : (
+            <div className="items">
+              {data.map((item: any) => (
+                <IonRow key={item.id}>
+                  <div className="item">
+                    <img src={item.img} className="book-img" />
+                    <div className="book-info">
+                      <IonLabel>{item.title}</IonLabel>
+                      <label className="book-author">{item.author}</label>
+                    </div>
+                    <IonButton shape="round" className="btn-price" size="small">
+                      R$ {item.price}
+                    </IonButton>
                   </div>
-                  <IonButton shape="round" className="btn-price" size="small">
-                    R$ {item.price}
-                  </IonButton>
-                </div>
-              </IonRow>
-            ))}
-          </div>
+                </IonRow>
+              ))}
+            </div>
+          )}
         </IonGrid>
       </IonContent>
     </IonPage>
