@@ -34,7 +34,7 @@ const AppPage: React.FC = () => {
           <div className="page-content">
             <div className="top-content">
               <div className="main-info">
-                <img className="icon-img-app-page" src="/minecraft_icon.png" />
+                <img className="icon-img-app-page" src="/imgs/games/minecraft_icon.png" />
                 <div>
                   <h1 className="app-name">Minecraft</h1>
                   <p className="app-developer">Mojang</p>
@@ -54,11 +54,11 @@ const AppPage: React.FC = () => {
                   <div className="info-swiper-slide">
                     <h3 className="star-number">4,6</h3>
                     <div className="stars">
-                      <img className="star" src="/star-full2.svg" />
-                      <img className="star" src="/star-full2.svg" />
-                      <img className="star" src="/star-full2.svg" />
-                      <img className="star" src="/star-full2.svg" />
-                      <img className="star" src="/half-star.svg" />
+                      <img className="star" src="/icons/star-full2.svg" />
+                      <img className="star" src="/icons/star-full2.svg" />
+                      <img className="star" src="/icons/star-full2.svg" />
+                      <img className="star" src="/icons/star-full2.svg" />
+                      <img className="star" src="/icons/half-star.svg" />
                     </div>
                     <p className="rating-number">4,9M avaliações</p>
                   </div>
@@ -73,21 +73,21 @@ const AppPage: React.FC = () => {
                 <SwiperSlide className="info-swiper-slide">
                   <div className="info-swiper-slide">
                     <p className="slider-title-text">Idade</p>
-                    <img className="l" src="/l.png" />
+                    <img className="l" src="/imgs/games/l.png" />
                     <p className="slider-subtitle-text">Livre</p>
                   </div>
                 </SwiperSlide>
                 <SwiperSlide className="info-swiper-slide">
                   <div className="info-swiper-slide">
                     <p className="slider-title-text">Categoria</p>
-                    <img className="controller" src="/controller.svg" />
+                    <img className="controller" src="/icons/controller.svg" />
                     <p className="slider-subtitle-text">Games</p>
                   </div>
                 </SwiperSlide>
                 <SwiperSlide className="info-swiper-slide">
                   <div className="info-swiper-slide">
                     <p className="slider-title-text">Desenvolvedor</p>
-                    <img className="l" src="/pfp.png" />
+                    <img className="l" src="/imgs/games/pfp.png" />
                     <p className="slider-subtitle-text">Mojang</p>
                   </div>
                 </SwiperSlide>
@@ -100,13 +100,13 @@ const AppPage: React.FC = () => {
                 className="img-swiper"
               >
                 <SwiperSlide className="img-swiper-slide">
-                  <img className="mine-img" src="/minecraft-store-image.png" />
+                  <img className="mine-img" src="/imgs/games/minecraft-store-image.png" />
                 </SwiperSlide>
                 <SwiperSlide className="img-swiper-slide">
-                  <img className="mine-img" src="/minecraft-store-image.png" />
+                  <img className="mine-img" src="/imgs/games/minecraft-store-image.png" />
                 </SwiperSlide>
                 <SwiperSlide className="img-swiper-slide">
-                  <img className="mine-img" src="/minecraft-store-image.png" />
+                  <img className="mine-img" src="/imgs/games/minecraft-store-image.png" />
                 </SwiperSlide>
               </Swiper>
             </div>
@@ -150,11 +150,11 @@ const AppPage: React.FC = () => {
                 <div className="rating-box">
                   <h3 className="review-user-title">Bem massa!</h3>
                   <div className="star-r-div">
-                    <img className="star-r" src="/full-b-star.svg" />
-                    <img className="star-r" src="/full-b-star.svg" />
-                    <img className="star-r" src="/full-b-star.svg" />
-                    <img className="star-r" src="/full-b-star.svg" />
-                    <img className="star-r" src="/half-b-star.svg" />
+                    <img className="star-r" src="/icons/full-b-star.svg" />
+                    <img className="star-r" src="/icons/full-b-star.svg" />
+                    <img className="star-r" src="/icons/full-b-star.svg" />
+                    <img className="star-r" src="/icons/full-b-star.svg" />
+                    <img className="star-r" src="/icons/half-b-star.svg" />
                   </div>
                   <p className="review-user-text">
                     Jogo muito legal, recomendo a todos.
@@ -166,10 +166,10 @@ const AppPage: React.FC = () => {
                 <div className="rating-box">
                   <h3 className="review-user-title">Ok</h3>
                   <div className="star-r-div">
-                    <img className="star-r" src="/full-b-star.svg" />
-                    <img className="star-r" src="/full-b-star.svg" />
-                    <img className="star-r" src="/full-b-star.svg" />
-                    <img className="star-r" src="/half-b-star.svg" />
+                    <img className="star-r" src="/icons/full-b-star.svg" />
+                    <img className="star-r" src="/icons/full-b-star.svg" />
+                    <img className="star-r" src="/icons/full-b-star.svg" />
+                    <img className="star-r" src="/icons/half-b-star.svg" />
                   </div>
                   <p className="review-user-text">
                     Bedrock pior q Java. A versão Java suporta uma ampla
@@ -183,7 +183,7 @@ const AppPage: React.FC = () => {
                 <div className="rating-box">
                   <h3 className="review-user-title">🤢</h3>
                   <div className="star-r-div">
-                    <img className="star-r" src="/half-b-star.svg" />
+                    <img className="star-r" src="/icons/half-b-star.svg" />
                   </div>
                   <p className="review-user-text">
                     Jogo de quadrado, muito ruim.
@@ -192,9 +192,9 @@ const AppPage: React.FC = () => {
                 </div>
               </SwiperSlide>
               <div className="rating-btns">
-                <img className="rating-img" src="/pen.svg" />
+                <img className="rating-img" src="/icons/pen.svg" />
                 <p className="rating-img-text">Avalie</p>
-                <img className="rating-img" src="/filter.svg" />
+                <img className="rating-img" src="/icons/filter.svg" />
                 <p className="rating-img-text">Filtro</p>
               </div>
             </Swiper>
